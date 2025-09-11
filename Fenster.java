@@ -4,8 +4,6 @@ public class Fenster
     private int     preis;
     private boolean kippbar;
     
-    private int     anzahlScheiben;
-    
     public String getMaterial()
     {
         return material;
