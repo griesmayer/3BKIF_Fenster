@@ -4,6 +4,27 @@ public class Fenster
     private int     preis;
     private boolean kippbar;
     
+    public Fenster(String neuMaterial, int neuPreis, boolean neuKippbar)
+    {
+        setMaterial(neuMaterial);
+        setPreis(neuPreis);
+        setKippbar(neuKippbar);
+    }
+    
+    public Fenster(int neuPreis)
+    {
+        setMaterial("Alu");
+        setPreis(neuPreis);
+        setKippbar(true);
+    }
+    
+    public Fenster()
+    {
+        setMaterial("Alu");
+        setPreis(499);
+        setKippbar(true);
+    }
+    
     public String getMaterial()
     {
         return material;
