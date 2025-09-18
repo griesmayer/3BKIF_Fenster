@@ -1,8 +1,8 @@
 public class Fenster
 {
-    private String  material;
-    private int     preis;
-    private boolean kippbar;
+    private String  material;       // Alu Holz Kunststoff
+    private int     preis;          // Der Preis des Fensters inkl. Steuer in Euro
+    private boolean kippbar;        // Kann das Fenster gekippt werden
     
     public Fenster(String neuMaterial, int neuPreis, boolean neuKippbar)
     {
@@ -42,6 +42,7 @@ public class Fenster
     
     public void setMaterial(String neuMaterial)
     {
+        // Die Eigenschaft material wird mit dem Wert des Parameters neuMaterial überschrieben
         material = neuMaterial;
     }
     
@@ -55,6 +56,11 @@ public class Fenster
         kippbar = neuKippbar;
     }
     
+    /*
+    material Fenster: preis EUR - kippbar
+    Alu Fenster: 399 EUR - true
+    Holz Fenster: 459 EUR - false
+    */
     public void printFenster()
     {
         System.out.println(material + " Fenster: " + preis + " EUR - " + kippbar);
