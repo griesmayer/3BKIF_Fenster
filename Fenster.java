@@ -54,6 +54,11 @@ public class Fenster
     {
         kippbar = neuKippbar;
     }
+    
+    public void printFenster()
+    {
+        System.out.println(material + " Fenster: " + preis + " EUR - " + kippbar);
+    }
 }
 
 
