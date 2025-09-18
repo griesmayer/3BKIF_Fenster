@@ -5,6 +5,7 @@ Holz Fenster: 459 EUR - false
 
 material_Fenster:_preis_EUR_-_kippbar
 
+
 material
 _Fenster:_
 preis
@@ -18,9 +19,12 @@ preis
 "_EUR_-_"
 kippbar
 
+
 material + "_Fenster:_" + preis + "_EUR_-_" + kippbar
 
+
 System.out.println(material + "_Fenster:_" + preis + "_EUR_-_" + kippbar);
+
 
 System.out.println(material + " Fenster: " + preis + " EUR - " + kippbar);
 
