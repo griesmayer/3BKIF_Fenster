@@ -18,6 +18,13 @@ public class Fenster
         setKippbar(true);
     }
     
+    public Fenster(String neuMaterial, int neuPreis)
+    {
+        setMaterial(neuMaterial);
+        setPreis(neuPreis);
+        setKippbar(true);  
+    }
+    
     public Fenster()
     {
         setMaterial("Alu");
