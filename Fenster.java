@@ -4,24 +4,24 @@ public class Fenster
     private int     preis;          // Der Preis des Fensters inkl. Steuer in Euro
     private boolean kippbar;        // Kann das Fenster gekippt werden
     
-    public Fenster(String neuMaterial, int neuPreis, boolean neuKippbar)
+    public Fenster(String material, int preis, boolean kippbar)
     {
-        setMaterial(neuMaterial);
-        setPreis(neuPreis);
-        setKippbar(neuKippbar);
+        setMaterial(material);
+        setPreis(preis);
+        setKippbar(kippbar);
     }
     
-    public Fenster(int neuPreis)
+    public Fenster(int preis)
     {
         setMaterial("Alu");
-        setPreis(neuPreis);
+        setPreis(preis);
         setKippbar(true);
     }
     
-    public Fenster(String neuMaterial, int neuPreis)
+    public Fenster(String material, int preis)
     {
-        setMaterial(neuMaterial);
-        setPreis(neuPreis);
+        setMaterial(material);
+        setPreis(preis);
         setKippbar(true);  
     }
     
@@ -47,30 +47,54 @@ public class Fenster
         return kippbar;
     }
     
-    public void setMaterial(String neuMaterial)
+    public void setMaterial(String material)
     {
         // Die Eigenschaft material wird mit dem Wert des Parameters neuMaterial überschrieben
-        material = neuMaterial;
+        this.material = material;
     }
     
-    public void setPreis(int neuPreis)
+    public void setPreis(int preis)
     {
-        preis = neuPreis;
+        this.preis = preis;
     }
     
-    public void setKippbar(boolean neuKippbar)
+    public void setKippbar(boolean kippbar)
     {
-        kippbar = neuKippbar;
+        this.kippbar = kippbar;
+    }
+    
+    public void testen()
+    {
+        //System.out.println(material.charAt(0));
+        //System.out.println(material.charAt(2));
+        System.out.println(material.indexOf(" "));
+    }
+    
+    //             012345
+    // material = "Alu 35"
+    public String getRohstoff()
+    {
+        int pos;
+        
+        pos = material.indexOf(" ");        // 3
+        return material.substring(0, pos);  // 0 .. 3 => "Alu"
     }
     
     /*
     material Fenster: preis EUR - kippbar
-    Alu Fenster: 399 EUR - true
-    Holz Fenster: 459 EUR - false
+    Alu Fenster: 399 EUR - KIPPBAR
+    Holz Fenster: 459 EUR - nicht KIPPBAR
     */
     public void printFenster()
     {
-        System.out.println(material + " Fenster: " + preis + " EUR - " + kippbar);
+        if (kippbar == true)
+        {
+            System.out.println(material + " Fenster: " + preis + " EUR - " + "KIPPBAR");
+        }
+        else
+        { 
+            System.out.println(material + " Fenster: " + preis + " EUR - " + "nicht KIPPBAR");
+        }
     }
 }
 
